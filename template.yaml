@@ -9,6 +9,9 @@ Description: >
 Globals:
   Function:
     Timeout: 3
+    Environment:
+        Variables:
+          BUCKET_NAME: 'dev-serverless-s3b'
 
 Resources:
   ApiGatewayApi:
@@ -33,7 +36,7 @@ Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: serverless-s3b
+      BucketName: 'dev-serverless-s3b'
       AccessControl: PublicRead
   InsertDataFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
