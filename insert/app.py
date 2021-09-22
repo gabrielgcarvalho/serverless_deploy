@@ -23,7 +23,6 @@ def lambda_handler(event, context):
         }
     try:
         uid = str(uuid.uuid4()).replace('-', '')
-        print(uid)
         response = client.put_item(
             TableName='itable',
             Item={
