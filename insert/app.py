@@ -48,7 +48,6 @@ def lambda_handler(event, context):
         "statusCode": 200,
         "body": json.dumps({
             "success": True,
-            "response": response,
             "deployment_stage": "dev"
         })
     }
